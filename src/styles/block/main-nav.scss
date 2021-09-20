@@ -1,0 +1,80 @@
+.main-nav {
+    width: auto;
+}
+
+.main-nav__wrapper {
+    padding: 40px 30px 0px 30px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media #{$medium-screen} {
+        width: 90%;
+        
+    }
+    @media #{$tablet} {
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    @media #{$phone-portrait} {
+        width: 90%;
+        align-items: flex-start;
+    }
+}
+
+
+.main-nav__menu {
+    min-height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media #{$phone-portrait} {
+        display: none;
+        flex-direction: column-reverse;
+    }
+}
+
+.main-nav__list {
+    margin: auto;
+    display: flex;
+    @media #{$phone-portrait} {
+        
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+.main-nav__hamburger{
+    display: none;
+    
+    @media #{$phone-portrait} {
+        display: block;
+    }
+}
+
+.main-nav__items {
+    margin-right: 30px;
+    list-style: none;
+    @media #{$tablet} {
+        margin-right: 15px;
+    }
+    
+
+    .main-nav__link {
+        text-decoration: none;
+        list-style: none;
+        @include font(500, 16px, $cf-text);
+    }
+}
+.main-nav__search{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: rgba(38, 47, 83, 0.05);
+    align-items: center;
+}
+.main-nav__search-logo{
+    margin: 16px;
+}
